@@ -93,7 +93,7 @@
     
     if (!_scanBackGroundView) {
         _scanBackGroundView = [[ScanBackGroundView alloc]initWithFrame:self.view.bounds];
-        _scanBackGroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
+        _scanBackGroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25];
         _scanBackGroundView.scanRect = scanRect;
     }
     
@@ -229,7 +229,7 @@
     scanAnimation.fromValue = @(0);
     scanAnimation.toValue = @(CGRectGetHeight(_scanRectView.frame));
     scanAnimation.repeatCount = CGFLOAT_MAX;
-    scanAnimation.duration = 1.5;
+    scanAnimation.duration = 1.7;
     scanAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     [self.lineView.layer addAnimation:scanAnimation forKey:@"scan"];
 }
